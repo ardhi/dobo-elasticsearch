@@ -1,4 +1,3 @@
 {
-  "alias": "elasticsearch",
   "dependencies": ["dobo"]
 }
