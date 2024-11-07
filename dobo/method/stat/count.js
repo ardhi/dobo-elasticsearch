@@ -8,7 +8,7 @@ async function statCount ({ schema, filter = {}, options = {} }) {
   const criteria = filter.query ? convert(filter.query) : undefined
   const resp = await instance.client.search({
     query: criteria,
-    index: schema.modelName,
+    index: schema.name,
     from: 0,
     size: 1,
     track_total_hits: true

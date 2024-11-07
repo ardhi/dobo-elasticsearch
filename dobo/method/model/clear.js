@@ -11,7 +11,7 @@ async function modelClear ({ schema, options = {} } = {}) {
     await create.call(this, schema)
   } else {
     await instance.client.deleteByQuery({
-      index: schema.modelName,
+      index: schema.name,
       query: { match_all: {} }
     })
   }

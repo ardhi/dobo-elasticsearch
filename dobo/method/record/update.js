@@ -8,7 +8,7 @@ async function recordUpdate ({ schema, id, body, options } = {}) {
   const old = noResult ? undefined : await getRecord.call(this, { schema, id })
   await instance.client.update({
     id,
-    index: schema.modelName,
+    index: schema.name,
     doc: body
   })
   if (noResult) return

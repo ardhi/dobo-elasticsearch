@@ -35,7 +35,7 @@ async function modelCreate ({ schema, options = {} }) {
   }
   const mappings = { properties }
   await instance.client.indices.create({
-    index: schema.modelName,
+    index: schema.name,
     mappings
   })
 }

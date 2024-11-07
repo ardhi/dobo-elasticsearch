@@ -6,7 +6,7 @@ async function recordCreate ({ schema, body, options = {} } = {}) {
   const { instance } = getInfo(schema)
 
   const resp = await instance.client.index({
-    index: schema.modelName,
+    index: schema.name,
     id: body.id,
     document: body
   })

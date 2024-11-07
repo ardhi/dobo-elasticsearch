@@ -14,7 +14,7 @@ async function recordFind ({ schema, filter = {}, options = {} } = {}) {
   })
   const resp = await instance.client.search({
     query: criteria,
-    index: schema.modelName,
+    index: schema.name,
     from: skip,
     size: limit,
     track_total_hits: !options.dataOnly,

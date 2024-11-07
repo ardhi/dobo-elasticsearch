@@ -7,7 +7,7 @@ async function recordGet ({ schema, id, options = {} } = {}) {
   let result
   try {
     result = await instance.client.get({
-      index: schema.modelName,
+      index: schema.name,
       id
     })
   } catch (err) {
