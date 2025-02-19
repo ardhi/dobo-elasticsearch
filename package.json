@@ -1,6 +1,6 @@
 {
   "name": "dobo-elasticsearch",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Elasticsearch driver for Dobo",
   "main": "index.js",
   "scripts": {

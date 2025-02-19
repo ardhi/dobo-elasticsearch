@@ -14,9 +14,9 @@ async function instantiate ({ connection, schemas, noRebuild }) {
       const exists = await modelExists.call(this, schema)
       if (exists) continue
       await modelCreate.call(this, schema)
-      this.log.trace('Model \'%s@%s\' successfully built on the fly', schema.name, connection.name)
+      this.log.trace('modelBuiltOnthefly%s%s%s', schema.name, connection.name)
     } catch (err) {
-      this.log.error('Error on \'%s\': %s', connection.name, err.message)
+      this.log.error('errorOn%s%s', connection.name, err.message)
     }
   }
 }
