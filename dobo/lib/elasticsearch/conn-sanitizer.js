@@ -1,5 +1,5 @@
 async function connSanitizer (conn) {
-  const { cloneDeep, has } = this.app.bajo.lib._
+  const { cloneDeep, has } = this.lib._
   if (has(conn, 'cloud')) {
     if (!conn.cloud.id) this.fatal('keyRequired%s%s', 'cloud.id', conn.name, { payload: conn })
   } else if (!has(conn, 'node')) this.fatal('keyRequired%s%s', 'node', conn.name, { payload: conn })

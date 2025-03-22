@@ -3,7 +3,7 @@ import { convert } from 'ts-mqes'
 async function recordFind ({ schema, filter = {}, options = {} } = {}) {
   const { getInfo } = this.app.dobo
   const { instance } = getInfo(schema)
-  const { map, forOwn, isEmpty, get, omit } = this.app.bajo.lib._
+  const { map, forOwn, isEmpty, get, omit } = this.lib._
   const { prepPagination } = this.app.dobo
   const { limit, skip, sort, page } = await prepPagination(filter, schema)
 

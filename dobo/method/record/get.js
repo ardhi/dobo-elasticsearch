@@ -1,7 +1,7 @@
 async function recordGet ({ schema, id, options = {} } = {}) {
   const { getInfo } = this.app.dobo
   const { instance } = getInfo(schema)
-  const { get } = this.app.bajo.lib._
+  const { get } = this.lib._
   const { thrownNotFound = true } = options
 
   let result
