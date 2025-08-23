@@ -1,7 +1,7 @@
 async function factory (pkgName) {
   const me = this
 
-  return class DoboElasticsearch extends this.lib.BajoPlugin {
+  return class DoboElasticsearch extends this.lib.Plugin {
     constructor () {
       super(pkgName, me.app)
       this.alias = 'dbes'
