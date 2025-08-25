@@ -1,14 +1,17 @@
 async function factory (pkgName) {
   const me = this
 
-  return class DoboElasticsearch extends this.lib.Plugin {
+  class DoboElasticsearch extends this.lib.Plugin {
+    static alias = 'dbes'
+    static dependencies = ['dobo']
+
     constructor () {
       super(pkgName, me.app)
-      this.alias = 'dbes'
-      this.dependencies = ['dobo']
       this.config = {}
     }
   }
+
+  return DoboElasticsearch
 }
 
 export default factory
