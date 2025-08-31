@@ -1,7 +1,7 @@
 async function factory (pkgName) {
   const me = this
 
-  class DoboElasticsearch extends this.lib.Plugin {
+  class DoboElasticsearch extends this.app.pluginClass.base {
     static alias = 'dbes'
     static dependencies = ['dobo']
 

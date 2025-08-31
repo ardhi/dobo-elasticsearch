@@ -3,7 +3,7 @@ import modelCreate from '../method/model/create.js'
 import modelExists from '../method/model/exists.js'
 
 async function instantiate ({ connection, schemas, noRebuild }) {
-  const { pick, omit } = this.lib._
+  const { pick, omit } = this.app.lib._
   this.instances = this.instances ?? []
   const instance = pick(connection, ['name', 'type'])
   instance.client = new Client(omit(connection, ['name', 'type']))

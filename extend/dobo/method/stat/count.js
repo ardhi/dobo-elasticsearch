@@ -3,7 +3,7 @@ import { convert } from 'ts-mqes'
 async function statCount ({ schema, filter = {}, options = {} }) {
   const { getInfo } = this.app.dobo
   const { instance } = getInfo(schema)
-  const { get } = this.lib._
+  const { get } = this.app.lib._
 
   const criteria = filter.query ? convert(filter.query) : undefined
   const resp = await instance.client.search({
