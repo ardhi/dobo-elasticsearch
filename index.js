@@ -12,10 +12,7 @@ async function factory (pkgName) {
    *
    * @class
    */
-  class DoboElasticsearch extends this.app.pluginClass.base {
-    static alias = 'dbes'
-    static dependencies = ['dobo']
-
+  class DoboElasticsearch extends this.app.baseClass.Base {
     constructor () {
       super(pkgName, me.app)
       this.config = {}

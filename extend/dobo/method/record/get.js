@@ -2,7 +2,7 @@ async function recordGet ({ schema, id, options = {} } = {}) {
   const { getInfo } = this.app.dobo
   const { instance } = getInfo(schema)
   const { get } = this.app.lib._
-  const { thrownNotFound = true } = options
+  const { silent = true } = options
 
   let result
   try {
@@ -11,7 +11,7 @@ async function recordGet ({ schema, id, options = {} } = {}) {
       id
     })
   } catch (err) {
-    if (!get(err, 'meta.body.found') && thrownNotFound) throw this.error('recordNotFound%s%s', id, schema.name, { statusCode: 404 })
+    if (!get(err, 'meta.body.found') && silent) throw this.error('recordNotFound%s%s', id, schema.name, { statusCode: 404 })
     throw err
   }
   return { data: result._source }
